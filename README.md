@@ -23,29 +23,46 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 - Microsoft visual C++
 - MySQL
 
-<h2>Installation Steps</h2>
+<h2>Creating the Azure Virtual Machine</h2>
 
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-I started by installing/enabling IIS with CGI and common HTTP features, also the IIS management console and as always 
-  waited for the download process to ensure the project continues to run smoothly. Then I download and install PHP manager, rewrite module and Visual C++. Then I'll go to download and install My SQL with a typical setup. After I launch the configuration wizard I'll select "Standard Configuration" and enter a password needed for later.
+In the initial phase of this osTicket installation lab, we establish the foundation in Azure. This involves creating a Resource Group and deploying a Windows 10 Virtual Machine (VM) named "Vm-osticket" with 4 vCPUs. IIS is then installed and configured on the VM, along with essential features such as CGI and Common HTTP Features. PHP Manager for IIS and the Rewrite Module are downloaded and installed, setting the stage for PHP integration within IIS.
 </p>
 <br />
+
+<h2>PHP and MySQL Setup</h2>
 
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-From here I will open IIS as an Admin and register PHP from within IIS then reload the server. From here Ill start to download osTicket. Afterwards extract and copy "upload" folder to wwwroot also renaming it osTicket. After reloading enable a few extentions, php_imap.dll, php_intl.dll, and php_opcache.dll. Rename ost-sampleconfig.php to ost-config.php and the change the permissions to "everyone". Now osTicket can continue installing within the browser.
+  
+Continuing the setup, a PHP directory is created, and PHP 7.3.8 is installed along with the necessary dependencies. The MySQL database is installed with a standard configuration, including a password setup. IIS is reloaded, registering PHP within IIS for seamless integration. MySQL 5.5.62 is configured using the Configuration Wizard. With the groundwork laid, the environment is ready for the installation of osTicket.
+
 </p>
 <br />
+
+<h2>osTicket Installation</h2>
 
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-From here Heidi SQL must be set up with a new session and password. Afterwards connect to the session and create a new database called "osTicket". Then we go back and continue setting up osTicket in the browser entering in the SQL Database and password we provided and everything will be installed correctly
+The osTicket installation involves downloading the application and extracting the contents to the designated directory within wwwroot. IIS is reloaded to reflect the changes. Extensions like php_imap.dll, php_intl.dll, and php_opcache.dll are enabled to enhance osTicket functionality. Configuration files are adjusted, and proper permissions are assigned. The setup is completed by configuring osTicket through a web browser, naming the help desk, specifying the default email, and creating a MySQL database called "osTicket."
 </p>
 <br />
+
+
+<h2>Verification and Cleanup</h2>
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Post-installation, the installation's success is verified by browsing to the help desk login page. Additionally, end-users can access osTicket via the provided URL. Cleanup involves deleting unnecessary setup files, setting appropriate permissions on configuration files, and ensuring a secure and operational environment.
+
+</p>
+<br />
+
