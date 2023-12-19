@@ -15,13 +15,6 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 - Windows 10</b> (21H2)
 
-<h2>List of Prerequisites</h2>
-
-- IIS
-- PHP Manager
-- Rewrite Module
-- Microsoft visual C++
-- MySQL
 
 <h2>Creating the Azure Virtual Machine</h2>
 
